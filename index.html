@@ -1,0 +1,132 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="icon" href="./imgs/logo.png" />
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <!-- loading  -->
+     <div class="loading  position-fixed top-0 bottom-0 end-0 start-0 bg-black d-flex justify-content-center align-items-center">
+<i class="fa fa-spin fa-spinner fa-5x text-white"> </i>
+     </div>
+    <!-- nav -->
+    <div class="vh-100 nav position-fixed d-flex">
+      <div class="d-flex flex-column justify-content-between links">
+        <div class="menu">
+          <ul class="list-unstyled text-white fw-lighter ms-3">
+            <li class="p-2 mt-5 position-relative" id="now"><a href="#">Now Playing</a></li>
+            <li class="p-2 mt-2 position-relative" id="popular">Popular</li>
+            <li class="p-2 mt-2 position-relative" id="top">Top Rated</li>
+            <li class="p-2 mt-2 position-relative" id="trending">Trending</li>
+            <li class="p-2 mt-2 position-relative" id="upcoming">Upcoming</li>
+            <li class="p-2 mt-2 position-relative"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-white px-4 py-3">
+            <i class="fa-brands fa-facebook-f fa-1x px-3"></i>
+            <i class="fa-brands fa-twitter fa-1x pe-3"></i>
+            <i class="fa-solid fa-globe fa-1x"></i>
+          </div>
+          <div class="nav-footer">
+            <p class="text-capitalize text-white-50 px-4">
+              Copyright © 2022 all right <br />reserved
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-flex justify-content-between align-items-center flex-column bg-white"
+      >
+        <img src="./imgs/logo.png" alt="logo" class="w-50 mt-4" />
+        <i class="fa-solid fa-align-justify fa-2x close-open"></i>
+        <div class="mb-4">
+          <i class="fa-solid fa-globe my-3"></i>
+          <br />
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- search -->
+    <div class="w-50 mx-auto">
+      <div class="w-100 p-5">
+        <input
+          class="form-control rounded-pill"
+          onkeyup="searchMovie(this.value)"
+          list="datalistOptions"
+          id="searchMovie"
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+    </div>
+
+    <!-- album -->
+    <div class="container">
+      <div class="row p-5 ms-4 gy-4 gx-5" id="movies">
+      
+      </div>
+      <div class="row p-5 ms-4 gy-4 gx-5" id="searchResults">
+      
+      </div>
+
+    </div>
+<!-- contact us -->
+ <div class="container contactUs px-3" id="contact">
+  <h1 class="text-white fw-lighter p-4">Contact Us</h1>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div> 
+        <input type="text" onkeyup="inputsValidation()" id="name" class="form-control-color w-100 " placeholder="Enter Your Name" >
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <input type="text" onkeyup="inputsValidation()" id="email" class="form-control-color w-100" placeholder="Enter Your Email">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <input type="text" onkeyup="inputsValidation()" id="phone" class="form-control-color w-100" placeholder="Enter Your Phone">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <input type="text" onkeyup="inputsValidation()" id="age" class="form-control-color w-100" placeholder="Enter Your Age">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <input type="password" onkeyup="inputsValidation()" id="password" class="form-control-color w-100" placeholder="Enter Your password">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <input type="password" onkeyup="inputsValidation()" id="repassword" class="form-control-color w-100" placeholder="Re-enter Your Password">
+      </div>
+    </div>
+   
+  </div>
+
+  <button class="btn btn-outline-dark text-white fw-light my-4 border-0">Submit</button>
+ </div>
+ 
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+
+  </html>
